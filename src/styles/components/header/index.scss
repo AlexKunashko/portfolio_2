@@ -1,0 +1,72 @@
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: $color-white;
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
+  z-index: 6;
+  & .logo img {
+    width: 70px;
+    height: 70px;
+    @include breakpoint($bp-sm) {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  ul {
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+  }
+  & .tel {
+    display: flex;
+    flex-direction: column;
+    a {
+      font-size: 20px;
+      font-weight: 700;
+      @include breakpoint($bp-lg) {
+        font-size: 17px;
+      }
+      @include breakpoint($bp-sm) {
+        font-size: 16px;
+      }
+    }
+    button {
+      background-color: $color-white;
+      color: #4a4a4a;
+      border: none;
+      padding: 0;
+      text-align: left;
+      @include breakpoint($bp-sm) {
+        font-size: 15px;
+      }
+    }
+  }
+  & .img {
+    margin-left: 10px;
+    @include breakpoint($bp-xs) {
+      margin-left: 0;
+    }
+    button {
+      background-color: $color-white;
+      border: none;
+      width: 44px;
+      height: 44px;
+      @include breakpoint($bp-sm) {
+        width: 35px;
+        height: 35px;
+      }
+      img {
+        width: 44px;
+        height: 44px;
+        @include breakpoint($bp-sm) {
+          width: 35px;
+          height: 35px;
+        }
+      }
+    }
+  }
+}

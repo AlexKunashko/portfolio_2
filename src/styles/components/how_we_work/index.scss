@@ -1,0 +1,221 @@
+.how_we_work {
+  position: relative;
+  padding: 80px 0;
+  &__header {
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 5px;
+      background-color: $color-orange;
+    }
+    h2 {
+      padding-top: 20px;
+      @include breakpoint($bp-sm) {
+        text-align: center;
+      }
+    }
+    @include breakpoint($bp-sm) {
+      &::before {
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+  & .inner {
+    position: relative;
+    min-height: 500px;
+    @include breakpoint($bp-xl) {
+      min-height: 750px;
+    }
+    @include breakpoint($bp-lg) {
+      min-height: 1000px;
+    }
+    @include breakpoint($bp-sm) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &__general {
+      position: absolute;
+      width: 250px;
+      text-align: center;
+      z-index: 2;
+      @include breakpoint($bp-sm) {
+        position: relative;
+        margin-top: 2em;
+      }
+    }
+    &__img {
+      position: relative;
+      z-index: 3;
+      img {
+        width: 215px;
+        height: 215px;
+        @include breakpoint($bp-sm) {
+          width: 150px;
+          height: 150px;
+        }
+      }
+      &-black {
+        z-index: 2;
+        position: absolute;
+        top: -5px;
+        right: 10px;
+        width: 211px;
+        height: 211px;
+        background-color: $color-dark;
+        border-radius: 50%;
+        @include breakpoint($bp-sm) {
+          right: 40px;
+          width: 150px;
+          height: 150px;
+        }
+      }
+    }
+    &__line {
+      z-index: 1;
+      position: absolute;
+      &:nth-child(1) {
+        transform: rotate(109deg);
+        top: 27%;
+        left: 16%;
+        @include breakpoint($bp-xl) {
+          transform: rotate(95deg);
+          top: 11%;
+          left: 26%;
+        }
+        @include breakpoint($bp-lg) {
+          transform: rotate(99deg);
+          top: 9%;
+          left: 47%;
+        }
+        @include breakpoint($bp-md) {
+          transform: rotate(118deg);
+          top: 4%;
+          left: 35%;
+        }
+        @include breakpoint($bp-sm) {
+          display: none;
+        }
+      }
+      &:nth-child(2) {
+        transform: rotate(31deg);
+        top: -6%;
+        left: 45%;
+        img {
+          width: 120%;
+        }
+        @include breakpoint($bp-xl) {
+          top: 3%;
+          left: 64%;
+          img {
+            width: 100%;
+          }
+        }
+        @include breakpoint($bp-lg) {
+          transform: rotate(-115deg);
+          top: 31%;
+          left: 45%;
+        }
+        @include breakpoint($bp-md) {
+          transform: rotate(61deg);
+          top: 33%;
+          left: 28%;
+        }
+        @include breakpoint($bp-sm) {
+          display: none;
+        }
+      }
+      &:nth-child(3) {
+        transform: rotate(-99deg);
+        top: -6%;
+        left: 73%;
+        @include breakpoint($bp-xl) {
+          display: none;
+        }
+        @include breakpoint($bp-lg) {
+          display: block;
+          transform: rotate(-72deg);
+          top: 50%;
+          left: 47%;
+        }
+        @include breakpoint($bp-md) {
+          transform: rotate(118deg);
+          top: 46%;
+          left: 32%;
+        }
+        @include breakpoint($bp-sm) {
+          display: none;
+        }
+      }
+      img {
+        width: 100%;
+      }
+    }
+    &__header {
+      margin-top: 1.5em;
+      color: #000000;
+      font-size: 20px;
+      font-weight: 700;
+    }
+    &__text {
+      line-height: 25px;
+      font-size: 14px;
+      margin-top: 0.5em;
+    }
+    &__application {
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      @include breakpoint($bp-xl) {
+        top: 5%;
+        transform: translateY(0);
+      }
+    }
+    &__miscalculation {
+      bottom: 0;
+      left: 25%;
+      @include breakpoint($bp-xl) {
+        bottom: auto;
+        top: 30%;
+        left: 34%;
+      }
+      @include breakpoint($bp-lg) {
+        bottom: auto;
+        top: 25%;
+        left: auto;
+        right: 0;
+      }
+    }
+    &__price {
+      top: -40px;
+      left: 50%;
+      @include breakpoint($bp-xl) {
+        top: -70px;
+        right: 0;
+        left: auto;
+      }
+      @include breakpoint($bp-lg) {
+        top: 45%;
+        left: 0;
+        right: auto;
+      }
+    }
+    &__delivery {
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      @include breakpoint($bp-xl) {
+        top: auto;
+        bottom: 0;
+        right: 0;
+        transform: translateY(0);
+      }
+    }
+  }
+}

@@ -1,0 +1,140 @@
+.catalog-header {
+  position: relative;
+  background-color: #f4f5f9;
+  padding-top: 100px;
+  @include breakpoint($bp-lg) {
+    padding-top: 60px;
+  }
+  &__text {
+    position: relative;
+    @include breakpoint($bp-sm) {
+      background-color: $color-orange;
+    }
+    &-bg {
+      position: absolute;
+      left: 0;
+      top: -5px;
+      background-color: $color-orange;
+      height: 34px;
+      width: 50%;
+      border-radius: 0 30px 30px 0;
+      z-index: 0;
+      @include breakpoint($bp-xxl) {
+        width: 55%;
+      }
+      @include breakpoint($bp-xl) {
+        width: 65%;
+      }
+      @include breakpoint($bp-lg) {
+        width: 84%;
+      }
+      @include breakpoint($bp-md) {
+        height: 58px;
+        width: 85%;
+      }
+      @include breakpoint($bp-sm) {
+        display: none;
+      }
+    }
+    & .container {
+      z-index: 1;
+      position: relative;
+    }
+  }
+  h2 {
+    @include breakpoint($bp-sm) {
+      text-align: center;
+    }
+  }
+  p {
+    margin-top: 0.5em;
+    @include breakpoint($bp-sm) {
+      padding-top: 0.5em;
+      text-align: center;
+      font-size: 14px;
+    }
+  }
+  img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 90%;
+    @include breakpoint($bp-xxl) {
+      height: 50%;
+    }
+    @include breakpoint($bp-lg) {
+      height: 30%;
+    }
+    @include breakpoint($bp-md) {
+      display: none;
+    }
+  }
+}
+.catalog {
+  background-color: #f4f5f9;
+  padding-bottom: 2em;
+  &__anim {
+    display: none;
+    @include breakpoint($bp-md) {
+      display: block;
+      text-align: right;
+      padding-top: 2em;
+    }
+  }
+  &__inner {
+    display: flex;
+    // justify-content: center;
+    // align-items: center;
+    flex-wrap: wrap;
+    @include breakpoint($bp-md) {
+      flex-wrap: nowrap;
+      column-gap: 1em;
+      overflow-x: scroll;
+    }
+  }
+  &__item {
+    width: 25%;
+    // height: 560px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 2em;
+    @include breakpoint($bp-md) {
+      width: 350px;
+      margin-top: 1em;
+    }
+    &-img {
+      text-align: center;
+      img {
+        width: 90%;
+        // height: 360px;
+        aspect-ratio: 9/12;
+      }
+    }
+    &-info {
+      text-align: center;
+      &-header {
+        font-weight: 700;
+        font-size: 20px;
+        text-transform: uppercase;
+        margin-top: 0.5em;
+        @include breakpoint($bp-sm) {
+          font-size: 16px;
+        }
+      }
+      &-text {
+        margin-top: 0.5em;
+      }
+    }
+    &-button {
+      text-align: center;
+      button {
+        margin-top: 0.5em;
+        width: 150px;
+        height: 45px;
+        font-size: 14px;
+      }
+    }
+  }
+}

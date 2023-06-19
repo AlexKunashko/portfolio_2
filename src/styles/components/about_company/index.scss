@@ -1,0 +1,141 @@
+.about_company {
+  padding: 40px 0;
+  position: relative;
+  @include breakpoint($bp-lg) {
+    text-align: center;
+  }
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 45%;
+    width: 55%;
+    height: 400px;
+    z-index: -1;
+    @include breakpoint($bp-xxl) {
+      width: 55%;
+    }
+    @include breakpoint($bp-lg) {
+      width: 100%;
+      left: 0;
+      top: auto;
+      bottom: 20%;
+    }
+    @include breakpoint($bp-sm) {
+      bottom: 30%;
+    }
+    @include breakpoint($bp-xs) {
+      height: 240px;
+    }
+    img {
+      height: 100%;
+      width: 90%;
+      @include breakpoint($bp-xxl) {
+        width: 100%;
+      }
+    }
+  }
+  h2 {
+    text-align: center;
+  }
+  ul {
+    @include breakpoint($bp-lg) {
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+      align-items: center;
+    }
+    li {
+      max-width: 550px;
+      margin-top: 2em;
+      list-style-type: disc;
+      margin-left: 20px;
+      @include breakpoint($bp-lg) {
+        margin-left: 0;
+      }
+      @include breakpoint($bp-sm) {
+        margin-top: 1em;
+      }
+    }
+  }
+
+  .app-btn-about_company {
+    margin-top: 2em;
+    @include breakpoint($bp-sm) {
+      margin-top: 1em;
+    }
+  }
+  .inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    @include breakpoint($bp-lg) {
+      margin-top: 2em;
+    }
+    &__header {
+      width: 500px;
+      text-align: center;
+      border-radius: 30px;
+      padding: 5px 5px;
+      background-color: $color-orange;
+      @include breakpoint($bp-sm) {
+        width: auto;
+        font-size: 14px;
+        padding: 5px 15px;
+        line-height: 16px;
+      }
+    }
+    &__video {
+      a {
+        display: block;
+        // height: 100%;
+        color: $color-white;
+        position: relative;
+        &:hover {
+          color: #ff0000;
+        }
+        img {
+          width: 100%;
+          // height: 100%;
+        }
+        i {
+          font-size: 50px;
+          height: 40px;
+          width: 40px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -100%);
+        }
+      }
+    }
+    &__info {
+      background-color: $color-blue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      color: $color-white;
+      width: 100%;
+      text-align: center;
+
+      .row {
+        width: 100%;
+        & > div {
+          padding: 20px 0;
+        }
+        @include breakpoint($bp-sm) {
+          :last-child {
+            padding-top: 0;
+          }
+        }
+      }
+      & .text-yellow {
+        color: #ffc11e;
+        font-size: 32px;
+        font-weight: 700;
+      }
+    }
+  }
+}

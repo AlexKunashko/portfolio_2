@@ -1,0 +1,84 @@
+.app {
+  &-btn {
+    color: #ffffff;
+    font-size: 21px;
+    line-height: 1.55;
+    font-weight: 600;
+    border-width: 1px;
+    border-radius: 30px;
+    background-color: #fa0000;
+    background-position: center center;
+    border-color: transparent;
+    border-style: solid;
+    text-transform: uppercase;
+    &-main {
+      width: 320px;
+      height: 64px;
+      @include breakpoint($bp-sm) {
+        max-width: 320px;
+        height: 55px;
+        font-size: 18px;
+      }
+    }
+    &-info {
+      width: 330px;
+      height: 55px;
+      @include breakpoint($bp-sm) {
+        font-size: 16px;
+      }
+    }
+    &-application {
+      width: 100%;
+      height: 50px;
+      font-size: 16px;
+    }
+    &-about_company {
+      width: 340px;
+      height: 60px;
+      font-size: 20px;
+    }
+    &-feedback {
+      width: 200px;
+      height: 50px;
+      font-size: 20px;
+      margin-top: 20px;
+    }
+    &-modal {
+      background-color: $color-orange;
+      color: $color-dark;
+      margin-top: 1em;
+      padding: 0.5em 0;
+      font-size: 15px;
+      height: 50px;
+      &-buy {
+        width: 231px;
+        height: 45px;
+        font-size: 15px;
+      }
+    }
+
+    @include breakpoint($bp-sm) {
+      width: 100%;
+    }
+  }
+  &-input {
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(37, 40, 45);
+    background-color: rgb(50, 52, 56);
+    font-size: 16px;
+    font-weight: 400;
+    height: 50px;
+    width: 100%;
+    padding-left: 20px;
+    margin-top: 20px;
+    &-feedback {
+      color: $color-dark;
+      background-color: $color-white;
+    }
+    &-modal {
+      color: $color-dark;
+      background-color: $color-white;
+      border-radius: 5px;
+    }
+  }
+}

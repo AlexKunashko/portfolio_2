@@ -1,0 +1,75 @@
+.modal-buy {
+  background-color: $color-white;
+  & .modal-header {
+    border: none;
+  }
+  & .modal-body {
+    display: flex;
+    justify-content: center;
+    @include breakpoint($bp-lg) {
+      flex-direction: column;
+      align-items: center;
+    }
+    h2 {
+      font-size: 24px;
+    }
+    button {
+      margin-top: 1em;
+    }
+    h3 {
+      margin-top: 1em;
+      font-size: 16px;
+      font-weight: 700;
+    }
+    p {
+      margin-top: 1em;
+      line-height: 2;
+    }
+    .modal-body__image {
+      max-width: 560px;
+      @include breakpoint($bp-xl) {
+        max-width: 460px;
+      }
+      @include breakpoint($bp-sm) {
+        width: 100%;
+      }
+    }
+
+    .modal-body__image-main {
+      margin-bottom: 5px;
+      width: 100%;
+      aspect-ratio: 1/1;
+    }
+
+    .modal-body__image-main img {
+      width: 100%;
+      aspect-ratio: 1/1;
+    }
+
+    .modal-body__image-other {
+      display: flex;
+      column-gap: 1%;
+      margin-top: 10px;
+    }
+
+    .modal-body__image-other img {
+      display: block;
+      width: 100px;
+      aspect-ratio: 1/1;
+    }
+    .modal-body__info {
+      margin-left: 2em;
+      @include breakpoint($bp-lg) {
+        margin-left: 0;
+        margin-top: 1em;
+        width: 460px;
+        @include breakpoint($bp-sm) {
+          width: auto;
+        }
+      }
+    }
+    .active {
+      opacity: 0.4;
+    }
+  }
+}

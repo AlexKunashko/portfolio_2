@@ -1,0 +1,65 @@
+.application {
+  background-color: $color-blue;
+  .row {
+    @include breakpoint($bp-lg) {
+      flex-direction: column-reverse;
+    }
+  }
+  & .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    &__bg {
+      display: flex;
+      position: relative;
+      @include breakpoint($bp-lg) {
+        max-height: 400px;
+        max-width: 400px;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    &__man {
+      width: 70%;
+      position: absolute;
+      bottom: 0;
+      left: -10%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  & .inner {
+    color: #bdbdbd;
+    margin: auto;
+    padding: 40px 0;
+    @include breakpoint($bp-lg) {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    h4 {
+      color: $color-white;
+      line-height: 40px;
+    }
+    p {
+      margin-top: 1em;
+    }
+
+    form {
+      @include breakpoint($bp-lg) {
+        max-width: 400px;
+      }
+      p {
+        text-align: left;
+      }
+      .app-btn-application {
+        margin-top: 1em;
+      }
+    }
+  }
+}

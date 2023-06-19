@@ -1,0 +1,7 @@
+import './fonts/FuturaPT/FuturaPT-Light.ttf'
+import './fonts/FuturaPT/FuturaPT-Book.ttf'
+import './fonts/FuturaPT/FuturaPT-Medium.ttf'
+import './fonts/FuturaPT/FuturaPT-Demi.ttf'
+import './fonts/FuturaPT/FuturaPT-Bold.ttf'
+import './fonts/FuturaPT/FuturaPT-ExtraBold.ttf'
+import './fonts/FuturaPT/FuturaPT-Heavy.ttf'

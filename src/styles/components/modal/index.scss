@@ -1,0 +1,337 @@
+@import "./modal-buy.scss";
+.btn-close {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  z-index: 2;
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+.modal-info {
+  @include breakpoint($bp-sm) {
+    font-size: 3vw;
+  }
+  @include breakpoint($bp-xs) {
+    font-size: 4vw;
+  }
+
+  & .modal-content {
+    border-radius: 0;
+    border: none;
+    padding: 2.5em 2.8em;
+    border-radius: 10px;
+    position: relative;
+    @include breakpoint($bp-sm) {
+      padding: 1.5em 1.8em;
+    }
+  }
+
+  & .modal-header {
+    padding: 0;
+    border: none;
+    font-weight: 700;
+    flex-direction: column;
+    margin-bottom: 1em;
+    h2 {
+      font-size: 1.5em;
+      line-height: 1.2;
+      b {
+        color: red;
+      }
+    }
+    p {
+      font-size: 1em;
+      font-weight: 500;
+      margin-top: 0.5em;
+    }
+  }
+
+  & .modal-body {
+    padding: 0;
+    font-size: 0.875em;
+    font-weight: 300;
+
+    p {
+      margin-top: 1.2em;
+
+      span {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  form {
+    & > * {
+      display: block;
+      // margin-top: 1em;
+      width: 100%;
+    }
+  }
+
+  & .body-our-work {
+    display: flex;
+    justify-content: space-between;
+    margin: -0.5em;
+
+    div {
+      white-space: normal;
+      display: inline-block;
+      width: 33.33333%;
+    }
+    img {
+      width: 100%;
+      border-radius: 1em;
+      padding: 0.5em;
+    }
+  }
+  & .body-coloration {
+    &-inner {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      margin: -0.5%;
+      margin-bottom: 2.5em;
+      @include breakpoint($bp-md) {
+        margin: -1%;
+        margin-bottom: 2.5em;
+      }
+      img {
+        display: none;
+      }
+
+      div {
+        width: 32.333%;
+        position: relative;
+        border-radius: 0.6em;
+        margin: 0.5%;
+        overflow: hidden;
+
+        @include breakpoint($bp-md) {
+          margin: 1%;
+          width: 48%;
+        }
+        @include breakpoint($bp-sm) {
+          margin: 1%;
+        }
+        span {
+          font-size: 1.25em;
+          position: absolute;
+          color: $color-white;
+          opacity: 0;
+          text-align: center;
+          font-weight: 500;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 3;
+          transition: opacity 0.3s ease;
+          @include breakpoint($bp-md) {
+            font-size: 1em;
+          }
+        }
+
+        &::before {
+          content: "";
+          display: block;
+          padding-top: 75%;
+        }
+
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          z-index: 2;
+          background-color: rgba(0, 0, 0, 0.5);
+          opacity: 0;
+          top: 0;
+          right: 0;
+          left: 0;
+          bottom: 0;
+          transition: opacity 0.3s ease;
+        }
+
+        img {
+          display: block;
+          position: absolute;
+          border-radius: 0.6em;
+          top: 0;
+          right: 0;
+          left: 0;
+
+          width: 100%;
+          height: 100%;
+
+          object-fit: cover;
+
+          z-index: 1;
+        }
+
+        &:hover {
+          span {
+            opacity: 1;
+          }
+
+          &::after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+.modal-quizz {
+  .modal-content {
+    padding: 0;
+  }
+  .q-container {
+    margin: 0;
+  }
+}
+.modal-catalog {
+  & .modal-content {
+    display: flex;
+    flex-direction: row;
+    & .inner {
+      padding: 2em;
+      padding-top: 1em;
+      width: 50%;
+      @include breakpoint($bp-xl) {
+        width: 55%;
+      }
+      @include breakpoint($bp-lg) {
+        width: 100%;
+      }
+      @include breakpoint($bp-sm) {
+        padding: 2em 0.5em;
+        padding-top: 1em;
+      }
+      & .modal-header {
+        flex-direction: column;
+        align-items: start;
+        border: none;
+        h2 {
+          font-weight: 600;
+          @include breakpoint($bp-xxl) {
+            line-height: 1.2;
+          }
+        }
+        &-bg-yellow {
+          border-radius: 2px;
+          background-color: #ffd13b;
+          font-size: 16px;
+          text-transform: uppercase;
+          font-weight: 600;
+          padding: 0.5em 1em;
+          margin-bottom: 0.5em;
+        }
+        p {
+          text-align: left;
+          font-size: 1.3125em;
+          font-weight: 500;
+        }
+      }
+      & .modal-body {
+        padding: 0;
+        .messenger-links {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 0.5em;
+          .messenger-label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.875em;
+            color: $color-dark;
+            background-color: #f0f0f0;
+            border-radius: 8.5em;
+            padding: 0.5em 1em;
+            width: 49%;
+            height: 40px;
+            transition: 220ms;
+            cursor: pointer;
+            img {
+              margin-right: 12px;
+              width: 25px;
+              height: 25px;
+            }
+          }
+          input {
+            display: none;
+          }
+          input:checked + .messenger-label {
+            background: #fadd6e;
+          }
+          .messenger-label:hover {
+            background: #fadd6e;
+          }
+        }
+        .app-btn {
+          position: relative;
+          width: 100%;
+          height: auto;
+          display: flex;
+          justify-content: start;
+          align-items: center;
+          &-img {
+            img {
+              width: 61px;
+              height: 61px;
+              @include breakpoint($bp-md) {
+                width: 50px;
+                height: 50px;
+              }
+            }
+          }
+          .text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            p {
+              font-size: 1.2em;
+              font-weight: 600;
+            }
+          }
+          & .lifehack-button {
+            z-index: 4;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            max-width: 10em;
+          }
+        }
+      }
+    }
+    & .inner-right {
+      width: 50%;
+      position: relative;
+      @include breakpoint($bp-xl) {
+        width: 45%;
+      }
+      &__lg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+      &__hg {
+        position: absolute;
+        top: -40%;
+        left: -19%;
+        width: 150%;
+        height: 140%;
+        @include breakpoint($bp-xl) {
+          width: 170%;
+        }
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

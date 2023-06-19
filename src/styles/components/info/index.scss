@@ -1,0 +1,87 @@
+.info {
+  padding: 80px 0;
+  @include breakpoint($bp-sm) {
+    padding-top: 160px;
+  }
+  @include breakpoint($bp-xs) {
+    padding-top: 110px;
+  }
+  & .inner {
+    width: 550px;
+    background-color: $color-blue;
+    color: $color-white;
+    border-radius: 10px;
+    position: relative;
+    padding: 30px;
+    padding-bottom: 40px;
+    @include breakpoint($bp-sm) {
+      text-align: center;
+      padding: 15px;
+      padding-top: 8em;
+      padding-bottom: 4em;
+    }
+    @include breakpoint($bp-xs) {
+      padding-top: 6.5em;
+    }
+    & h2 {
+      font-size: 32px;
+      @include breakpoint($bp-xs) {
+        font-size: 26px;
+      }
+    }
+    p {
+      line-height: 28px;
+      margin-top: 1em;
+      @include breakpoint($bp-sm) {
+        font-size: 14px;
+      }
+      @include breakpoint($bp-xs) {
+        font-size: 12px;
+      }
+    }
+    & .text-gray {
+      font-size: 14px;
+      color: #969696;
+      @include breakpoint($bp-xs) {
+        font-size: 12px;
+      }
+    }
+    &-margin {
+      @include breakpoint($bp-xl) {
+        margin-top: 5em;
+      }
+      @include breakpoint($bp-sm) {
+        margin-top: 8em;
+      }
+    }
+    &__button {
+      position: absolute;
+      bottom: 0;
+      left: 30px;
+      transform: translateY(50%);
+      @include breakpoint($bp-sm) {
+        position: relative;
+        left: auto;
+        max-width: 330px;
+        margin: auto;
+      }
+    }
+    &__img {
+      position: absolute;
+      top: 50%;
+      right: -20px;
+      transform: translateY(-50%);
+      display: flex;
+      justify-content: end;
+      @include breakpoint($bp-sm) {
+        top: 0;
+        left: 50%;
+        right: auto;
+        transform: translate(-50%, -50%);
+      }
+      img {
+        width: 90%;
+      }
+    }
+  }
+}

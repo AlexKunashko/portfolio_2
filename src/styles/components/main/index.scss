@@ -1,0 +1,98 @@
+.main {
+  padding-top: 140px;
+  padding-bottom: 60px;
+  background-color: $color-blue;
+  color: $color-white;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  @include breakpoint($bp-sm) {
+    padding-top: 100px;
+  }
+  & .inner {
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 5px;
+      background-color: $color-orange;
+    }
+    @include breakpoint($bp-md) {
+      text-align: center;
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    h3 {
+      padding-top: 20px;
+    }
+    p {
+      font-size: 22px;
+      @include breakpoint($bp-xl) {
+        font-size: 20px;
+      }
+      @include breakpoint($bp-sm) {
+        font-size: 16px;
+      }
+    }
+    &__button {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      @include breakpoint($bp-md) {
+        justify-content: center;
+      }
+      & > * {
+        margin-top: 1em;
+      }
+      a {
+        margin-left: 1em;
+        font-family: "Futura PT";
+        color: $color-white;
+        text-decoration: underline;
+      }
+    }
+    &__info {
+      margin-top: 1em;
+      display: flex;
+      align-items: center;
+      @include breakpoint($bp-md) {
+        justify-content: center;
+      }
+      img {
+        width: 37px;
+        height: 37px;
+        @include breakpoint($bp-md) {
+          display: none;
+        }
+      }
+      p {
+        margin-left: 1em;
+        font-size: 20px;
+
+        @include breakpoint($bp-md) {
+          padding: 0 10%;
+        }
+        @include breakpoint($bp-sm) {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  & .image {
+    background-color: $color-orange;
+    border-radius: 50%;
+    text-align: center;
+    aspect-ratio: 1/1;
+    @include breakpoint($bp-lg) {
+      margin-top: 3em;
+    }
+    img {
+      width: 87%;
+    }
+  }
+}
